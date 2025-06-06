@@ -388,4 +388,75 @@
   background-color: #198754; /* Bootstrap success green */
 }
 
+/* Data table cell identification classes for testing */
+.cell-indicator {
+  /* First column - row indicator/selection */
+  position: relative;
+}
+
+.cell-priority {
+  /* Priority column with badge */
+  text-align: center;
+}
+
+.cell-authorization-number {
+  /* Authorization number with link */
+  font-weight: 500;
+}
+
+.cell-received-date {
+  /* Received date timestamp */
+  font-size: 0.875rem;
+}
+
+.cell-admission-date {
+  /* Admission date */
+  font-size: 0.875rem;
+}
+
+.cell-diagnosis {
+  /* Diagnosis code badge */
+  text-align: center;
+}
+
+.cell-drg-code {
+  /* DRG code value */
+  text-align: center;
+}
+
+.cell-provider {
+  /* Provider name badge */
+  text-align: center;
+}
+
+.cell-review-type {
+  /* Review type badge */
+  text-align: center;
+}
+
+.cell-member-name {
+  /* Member/patient name */
+  font-weight: 500;
+}
+
+.cell-approved-days {
+  /* Approved days count */
+  text-align: center;
+}
+
+.cell-next-review-date {
+  /* Next review date timestamp */
+  font-size: 0.875rem;
+}
+
+.cell-status {
+  /* Status badge */
+  text-align: center;
+}
+
+.cell-action {
+  /* Action dropdown menu */
+  text-align: center;
+}
+
 

@@ -372,26 +372,26 @@ const Dashboard = ({ user, onLogout }) => {
                     ) : (
                       authorizations.map((auth, index) => (
                         <tr key={auth.id} className={index === 0 ? "selected" : ""}>
-                          <td>
+                          <td className="cell-indicator">
                             {index === 0 && <i className="bi bi-play-fill text-primary"></i>}
                           </td>
-                          <td className={`priority-cell priority-${auth.priority?.toLowerCase() || 'medium'}`}>
+                          <td className={`cell-priority priority-cell priority-${auth.priority?.toLowerCase() || 'medium'}`}>
                             <span className={`badge badge-priority-${auth.priority?.toLowerCase() || 'medium'}`}>
                               {auth.priority || 'Medium'}
                             </span>
                           </td>
-                          <td>
+                          <td className="cell-authorization-number">
                             <a href="#" className="text-decoration-none">
                               {auth.authorization_number || 'N/A'}
                             </a>
                           </td>
-                          <td>
+                          <td className="cell-received-date">
                             <small>{auth.received_date ? formatDateTime(auth.received_date) : 'N/A'}</small>
                           </td>
-                          <td>
+                          <td className="cell-admission-date">
                             <small>{auth.admission_date ? formatDate(auth.admission_date) : 'N/A'}</small>
                           </td>
-                          <td>
+                          <td className="cell-diagnosis">
                             <span 
                               className="badge" 
                               style={{backgroundColor: getBadgeColor(auth.diagnosis_code), color: 'white'}}
@@ -399,28 +399,28 @@ const Dashboard = ({ user, onLogout }) => {
                               {auth.diagnosis_code || 'N/A'}
                             </span>
                           </td>
-                          <td>{auth.drg_code || 'N/A'}</td>
-                          <td>
+                          <td className="cell-drg-code">{auth.drg_code || 'N/A'}</td>
+                          <td className="cell-provider">
                             <span className="badge" style={{backgroundColor: '#17a2b8', color: 'white'}}>
                               {auth.provider_name || 'Unknown'}
                             </span>
                           </td>
-                          <td>
+                          <td className="cell-review-type">
                             <span className="badge" style={{backgroundColor: '#6c757d', color: 'white'}}>
                               {auth.review_type || 'Standard'}
                             </span>
                           </td>
-                          <td>{auth.member_name || 'N/A'}</td>
-                          <td>{auth.approved_days || '0'}</td>
-                          <td>
+                          <td className="cell-member-name">{auth.member_name || 'N/A'}</td>
+                          <td className="cell-approved-days">{auth.approved_days || '0'}</td>
+                          <td className="cell-next-review-date">
                             <small>{auth.next_review_date ? formatDateTime(auth.next_review_date) : 'N/A'}</small>
                           </td>
-                          <td>
+                          <td className="cell-status">
                             <span className={`badge ${getStatusBadgeClass(auth.status)}`}>
                               {auth.status || 'Pending'}
                             </span>
                           </td>
-                          <td>
+                          <td className="cell-action">
                             <i className="bi bi-three-dots action-dots"></i>
                           </td>
                         </tr>

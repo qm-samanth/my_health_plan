@@ -93,7 +93,7 @@ router.get('/authorizations', async (req, res) => {
         a.next_review_date,
         a.pos,
         -- Member info
-        CONCAT(m.first_name, ', ', m.last_name) as member_name,
+        CONCAT(m.first_name, ' ', m.last_name) as member_name,
         m.member_number,
         -- Provider info
         p.provider_name,
