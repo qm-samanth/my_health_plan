@@ -122,3 +122,269 @@
   outline: none;
   text-decoration: none;
 }
+
+/* Dashboard specific styles */
+.dashboard-card {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Tab navigation styling */
+.nav-tabs {
+  border-bottom: 2px solid #e9ecef;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: #6c757d;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  margin-bottom: -2px;
+  background: none;
+}
+
+.nav-tabs .nav-link:hover {
+  border: none;
+  color: #007bff;
+  background: none;
+}
+
+.nav-tabs .nav-link.active {
+  color: #007bff;
+  border: none;
+  border-bottom: 2px solid #007bff;
+  background: none;
+  font-weight: 600;
+}
+
+/* Table enhancements */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.05);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.table th {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6c757d;
+  border-bottom: 2px solid #dee2e6;
+  padding: 1rem 0.75rem;
+  position: relative;
+}
+
+.table td {
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f1f3f4;
+  position: relative;
+}
+
+/* Card header improvements */
+.card-header {
+  background-color: #f8f9fa !important;
+  border-bottom: 1px solid #dee2e6;
+  font-weight: 600;
+  padding: 1.25rem 1.5rem;
+}
+
+/* Badge styling improvements */
+.badge {
+  font-weight: 500;
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+}
+
+/* Priority badge specific colors */
+.badge-priority-high {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+.badge-priority-medium {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.badge-priority-low {
+  background-color: #198754 !important;
+  color: white !important;
+}
+
+/* Status badge improvements */
+.badge-status-pending {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.badge-status-review {
+  background-color: #0dcaf0 !important;
+  color: #212529 !important;
+}
+
+.badge-status-appeal {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+/* Pagination improvements */
+.pagination .page-link {
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.75rem;
+  margin: 0 2px;
+  border-radius: 4px;
+}
+
+.pagination .page-link:hover {
+  color: #007bff;
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Form select improvements */
+.form-select-sm {
+  font-size: 0.875rem;
+  padding: 0.375rem 2rem 0.375rem 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+/* Action dropdown styling */
+.action-dots {
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.action-dots:hover {
+  background-color: #f8f9fa;
+}
+
+/* Summary card improvements */
+.summary-card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.summary-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card .card-body {
+  padding: 1.5rem;
+}
+
+.summary-card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.summary-card p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Due Today card special styling to match screenshot */
+.due-today-card {
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.due-today-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* High Priority card styling */
+.high-priority-card {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+}
+
+/* Better spacing for dashboard header */
+.dashboard-header {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+  margin-bottom: 2rem;
+}
+
+/* Table row selection indicator */
+.table tbody tr.selected {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Improve small text readability */
+.table small {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+/* Authorization number links */
+.table a {
+  color: #007bff;
+  font-weight: 500;
+}
+
+.table a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Priority column with integrated indicator */
+.priority-cell {
+  position: relative;
+  padding-left: 20px !important; /* Space for the wider indicator */
+}
+
+.priority-cell::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  z-index: 1;
+}
+
+.priority-cell.priority-high::before {
+  background-color: #dc3545; /* Bootstrap danger red */
+}
+
+.priority-cell.priority-medium::before {
+  background-color: #ffc107; /* Bootstrap warning yellow */
+}
+
+.priority-cell.priority-low::before {
+  background-color: #198754; /* Bootstrap success green */
+}
+
+
