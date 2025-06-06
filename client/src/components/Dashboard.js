@@ -169,7 +169,7 @@ const Dashboard = ({ user, onLogout }) => {
           
           {/* Navigation Links */}
           <div className="navbar-nav me-auto">
-            <button className="nav-menu-item nav-menu-active me-3">My Dashboard</button>
+            <button className="nav-menu-item nav-menu-active me-3">Dashboard</button>
             <button className="nav-menu-item me-3">Members</button>
             <button className="nav-menu-item me-3">Tasks</button>
             <button className="nav-menu-item me-3">Providers</button>
