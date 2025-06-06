@@ -171,6 +171,7 @@
 .table-hover tbody tr:hover {
   background-color: rgba(0, 123, 255, 0.05);
   transition: background-color 0.15s ease-in-out;
+  cursor: pointer;
 }
 
 .table th {
@@ -459,4 +460,181 @@
   text-align: center;
 }
 
+/* Enhanced Member Overview Styling */
+.member-header {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
 
+.member-header h3 {
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.member-info-bar {
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.member-avatar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.member-avatar:hover {
+  transform: scale(1.05);
+}
+
+.member-info-bar .text-muted {
+  color: #6c757d !important;
+}
+
+.member-info-bar span {
+  color: #495057;
+}
+
+/* Icon hover effects in member header */
+.member-header i {
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.member-header i:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  transform: scale(1.1);
+}
+
+/* Authorization Sub-tabs Styling */
+.authorization-subtabs {
+  padding: 10px 0;
+}
+
+.auth-step-btn {
+  position: relative;
+  white-space: nowrap;
+  min-width: auto;
+  transition: all 0.3s ease;
+}
+
+.auth-step-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.auth-step-btn.active {
+  box-shadow: 0 2px 12px rgba(0, 123, 255, 0.3);
+}
+
+.auth-step-btn.completed {
+  box-shadow: 0 2px 12px rgba(40, 167, 69, 0.3);
+}
+
+.auth-step-line {
+  transition: all 0.3s ease;
+}
+
+.auth-tab-content {
+  min-height: 400px;
+  padding-top: 20px;
+}
+
+.medical-necessity-icon {
+  text-align: center;
+}
+
+.informed-care-section .small {
+  font-size: 12px;
+  color: #007bff;
+}
+
+.informed-care-section .small:hover {
+  text-decoration: underline !important;
+}
+
+/* Enhanced Request Tab Animations and Effects */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Special Styling for 20250P000367 Tab */
+.special-request-tab {
+  position: relative;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+  color: #495057 !important;
+  font-weight: 700 !important;
+  border: 2px solid #dee2e6 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-3px) !important;
+}
+
+.special-request-tab:hover {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-4px) !important;
+}
+
+.special-request-badge {
+  background: rgba(73, 80, 87, 0.8) !important;
+  color: white !important;
+  border: 1px solid rgba(73, 80, 87, 0.3) !important;
+  font-weight: 600 !important;
+}
+
+.request-tabs .nav-tabs {
+  position: relative;
+  overflow: visible;
+}
+
+.priority-indicator {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  background: #6c757d;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(108, 117, 125, 0.7);
+}
+
+.request-header-card {
+  transition: all 0.3s ease;
+}
+
+.request-header-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
