@@ -55,8 +55,8 @@
 
 .modal-backdrop {
   z-index: 1040;
-  backdrop-filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Custom dropdown styling */
