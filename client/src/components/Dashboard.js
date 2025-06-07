@@ -296,6 +296,7 @@ const Dashboard = ({ user, onLogout, onMemberClick, onNavigate }) => {
                     ) : (
                       authorizations.map((auth, index) => (
                         <tr key={auth.id} className={index === 0 ? "selected" : ""} onClick={() => handleRowClick(auth)}>
+                          <td id="member_number" style={{display: 'none'}}>{auth.member_number}</td>
                           <td className="cell-indicator">
                             {index === 0 && <i className="bi bi-play-fill text-primary"></i>}
                           </td>
