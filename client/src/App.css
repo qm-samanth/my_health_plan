@@ -638,3 +638,133 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
 }
+
+/* Login Page Specific Styles */
+.login-container {
+  overflow: hidden; /* Prevent scrollbars if content overflows slightly */
+}
+
+.login-branding-column {
+  background: linear-gradient(to bottom, rgba(0, 123, 255, 0.85), rgba(0, 86, 179, 0.95)), 
+              url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login-logo-text {
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.login-tagline {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.login-form-column {
+  padding: 2rem;
+}
+
+.login-form-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-title {
+  font-size: 2rem;
+  color: #007bff; /* Changed to theme primary blue */
+}
+
+.login-subtitle {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.login-label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.login-input {
+  border-radius: 0.375rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #ced4da;
+}
+
+.login-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1; /* Added to help with vertical alignment */
+  z-index: 3; /* Ensure it's above the input field */
+}
+
+.login-link {
+  font-size: 0.85rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.login-btn-main {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  background-color: #007bff; /* Changed to theme primary blue */
+  border-color: #007bff; /* Changed to theme primary blue */
+}
+
+.login-btn-main:hover {
+  background-color: #0056b3; /* Darker shade of theme blue for hover */
+  border-color: #0056b3; /* Darker shade of theme blue for hover */
+}
+
+.login-btn-google {
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  border-color: #ced4da;
+  color: #495057;
+}
+
+.login-btn-google:hover {
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+.login-signup-link p {
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.login-signup-link a {
+  color: #007bff;
+  font-weight: 600;
+}
