@@ -7,6 +7,7 @@ const Login = ({ onLogin }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showSignUpModal, setShowSignUpModal] = useState(false); // New state for Sign Up modal
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,6 +33,23 @@ const Login = ({ onLogin }) => {
       setLoading(false);
     }
   };
+
+  const handleSignUpClick = (e) => {
+    e.preventDefault(); // Prevent default link behavior
+    setShowSignUpModal(true);
+  };
+
+  const handleCloseSignUpModal = () => {
+    setShowSignUpModal(false);
+  };
+
+  const demoUsers = [
+    { email: "maria.hartsell@myhealthplan.com", role: "Care Manager" },
+    { email: "john.doe@myhealthplan.com", role: "Physician" },
+    { email: "jane.smith@myhealthplan.com", role: "Support Staff" },
+    { email: "admin@myhealthplan.com", role: "Administrator" }
+  ];
+  const demoPassword = "password123";
 
   return (
     <div className="login-container container-fluid vh-100 p-0">
@@ -110,13 +128,7 @@ const Login = ({ onLogin }) => {
             </form>
             
             <div className="mt-4 text-center login-signup-link">
-              <p className="mb-0">Don't have an account? <a href="#" className="login-link fw-semibold">Sign Up</a></p>
-            </div>
-
-            <div className="mt-3 text-center" style={{opacity: 0.7}}>
-              <small className="text-muted">
-                Demo: maria.hartsell@myhealthplan.com / password123
-              </small>
+              <p className="mb-0">Don't have an account? <a href="#" onClick={handleSignUpClick} className="login-link fw-semibold">Sign Up</a></p>
             </div>
 
           </div>
@@ -135,6 +147,61 @@ const Login = ({ onLogin }) => {
           </div>
         </div>
       </div>
+
+      {/* Sign Up / Demo Credentials Modal */}
+      {showSignUpModal && (
+        <div className="modal fade show d-block" tabIndex="-1" role="dialog">
+          <div className="modal-backdrop-blur"></div>
+          <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div className="modal-content signup-modal-content"> {/* Added class for specific styling */}
+              <div className="modal-header signup-modal-header"> {/* Added class for specific styling */}
+                <h5 className="modal-title">Demo Account Credentials</h5>
+                <button 
+                  type="button" 
+                  className="btn-close"
+                  onClick={handleCloseSignUpModal}
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div className="modal-body signup-modal-body"> {/* Added class for specific styling */}
+                <p className="mb-3 text-muted">For demonstration purposes, you can use any of the following accounts. The password for all accounts is: <strong>{demoPassword}</strong></p>
+                <div className="table-responsive">
+                  <table className="table table-hover table-striped demo-credentials-table">
+                    <thead className="table-light">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Email Address</th>
+                        <th scope="col">Role / Persona</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {demoUsers.map((user, index) => (
+                        <tr key={index}>
+                          <th scope="row">{index + 1}</th>
+                          <td>{user.email}</td>
+                          <td>{user.role}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="mt-3 small text-center text-danger">
+                  Note: This is for demo purposes only. In a real application, users would register through a secure sign-up process.
+                </p>
+              </div>
+              <div className="modal-footer signup-modal-footer"> {/* Added class for specific styling */}
+                <button 
+                  type="button" 
+                  className="btn btn-primary"
+                  onClick={handleCloseSignUpModal}
+                >
+                  Got it!
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -875,3 +875,58 @@
   opacity: 0.6;
   transform: none !important;
 }
+
+/* Sign Up / Demo Credentials Modal Styling */
+.signup-modal-content {
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.signup-modal-header {
+  background: linear-gradient(135deg, #6c757d 0%, #343a40 100%); /* Neutral dark gradient */
+  color: white;
+  padding: 1.25rem 1.5rem;
+  border-bottom: none;
+}
+
+.signup-modal-header .modal-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.signup-modal-header .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.signup-modal-body {
+  padding: 1.5rem 2rem 2rem 2rem;
+  background-color: #fff;
+}
+
+.demo-credentials-table {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.demo-credentials-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.demo-credentials-table td,
+.demo-credentials-table th {
+  vertical-align: middle;
+}
+
+.signup-modal-footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  padding: 1rem 1.5rem;
+  justify-content: center; /* Center the button */
+}
+
+.signup-modal-footer .btn {
+  min-width: 120px;
+  font-weight: 500;
+}
